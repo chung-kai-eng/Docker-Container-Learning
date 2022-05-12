@@ -5,14 +5,15 @@
 -  ```.devcontainer``` will be added to the project
 
 - ```f1```, type ```reopen in container```, and select ```reopen in container```
+you will find the container like below
+![figure 1](https://github.com/chung-kai-eng/Docker-Container-Learning/blob/main/figure/screen%20shot.png "connect to container")
 
-- ```Ctrl``` + ``` \` ```: open the terminal
+
+- ```Ctrl``` + ``` ` ```: open the terminal
 
 ```shell=
-
 $ python --version
 $ pip3 install --user -r requirements.txt // can put in ```postCreateCommand```
-
 ```
 
 ### ```.devcontainer```
