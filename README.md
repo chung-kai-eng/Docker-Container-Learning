@@ -1,5 +1,8 @@
 # Docker-Container-Learning
 
+- relationship between remote container and vscode
+![](https://github.com/chung-kai-eng/Docker-Container-Learning/blob/main/figure/Local%20and%20Container%20relationship.png)
+
 ### Add a dev container
 - ```f1```, type ```add dev container``` and select ```Remote Containers: Add Development Container Configuration Files```
 -  ```.devcontainer``` will be added to the project
