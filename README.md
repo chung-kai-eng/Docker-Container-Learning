@@ -6,7 +6,7 @@
 
 - ```f1```, type ```reopen in container```, and select ```reopen in container```
 you will find the container like below
-![](https://github.com/chung-kai-eng/Docker-Container-Learning/blob/main/figure/screen%20shot.png =200x200)
+![](https://github.com/chung-kai-eng/Docker-Container-Learning/blob/main/figure/screen%20shot.png)
 
 
 - ```Ctrl``` + ``` ` ```: open the terminal
