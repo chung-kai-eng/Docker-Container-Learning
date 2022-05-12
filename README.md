@@ -2,7 +2,7 @@
 
 ### Add a dev container
 - ```f1```, type ```add dev container``` and select ```Remote Containers: Add Development Container Configuration Files```
--  ```.devcontainer``` will be added to the project
+-  ```.devcontainer & Dockerfile``` will be added to the project (This two files came from the VSCode dev containers)
 
 - ```f1```, type ```reopen in container```, and select ```reopen in container```
 you will find the container like below
@@ -31,6 +31,25 @@ $ pip3 install --user -r requirements.txt // can put in ```postCreateCommand```
     "ms-python.python",
     "ms-python.vscode-pylance"
 ],
+```
+
+### ```Dockerfile```
+- If you want to add software beyond what's available in those images or preconfigured dev containers? (beyond devcontainer.json  docker image), you have to install different software every time you rebuild your container. The most efficient practive is to install software through your Dockerfile.
+    - You might want to include ```Node.js, SQL...``` in any of your dev containers, so install software by write the command in Dockerfile
+        - e.g. ```apt-get```, ```apt``` for Ubuntu
+- The ```RUN``` command creates a new layer. Layers are how the container knows what has changed and what in the container needs to be updated when you rebuild it. You should try to keep related logic together in the same RUN command so that you don't create unnecessary layers.
+- The ```\``` denotes a line break at the end of a line. You need it for multiple-line commands.
+The ```&&``` is how you add a command to the ```RUN``` line.
+The ```DEBIAN_FRONTEND``` export avoids warnings when you go on to work with your container. When you're adding other software, you might instead use other flags or parameters, such as ```-y```.
+The ```-y``` ensures that ```apt-get``` doesn't prompt you to confirm that you want to finish the installation. These prompts would cause the container build to fail because nobody would be there to select ```Y``` or ```N```.
+
+```yml=
+RUN apt-get update \
+&& apt-get install -y curl ca-certificates \
+&& curl -sL https://deb.nodesource.com/setup_14.x | bash \
+&& apt-get install nodejs \
+&& node -v \
+&& npm -v \
 ```
 
 ### Flask
