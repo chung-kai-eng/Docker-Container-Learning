@@ -1,5 +1,7 @@
 # Docker-Container-Learning
 
+- [**Dockerfile cheatsheet**](https://devhints.io/dockerfile)
+- [**Docker-compose cheatsheet**](https://devhints.io/docker-compose)
 - relationship between remote container and vscode
 ![](https://github.com/chung-kai-eng/Docker-Container-Learning/blob/main/figure/Local%20and%20Container%20relationship.png)
 
