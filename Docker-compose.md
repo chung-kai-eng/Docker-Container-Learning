@@ -1,3 +1,10 @@
+
+### Database Migration
+- When to use ```.yml``` and ```.json``` file?
+    - ```.yml```: for configuration file
+    - ```.json```: for exchanging data between multiple computers e.g. a client or server (much faster to parse due to no need for judging the datatype) (All datatype are being specified such as str using " ", but ```.yml``` file have to view all data as str)
+ 
+ 
 ### Docker Compose
 [Docker compose tutorial](https://www.youtube.com/watch?v=HG6yIjZapSA)
 ```bash=
